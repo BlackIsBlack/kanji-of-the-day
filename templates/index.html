@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="h-100">
+<head>
+    <title>Kanji of the Day</title>
+    <!-- Javascript -->
+    <script src="{{url_for('static', filename='js/jquery-3.6.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/handlebars.min-v4.7.7.js')}}"></script>
+    <script src="{{url_for('static', filename='js/getKanji.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+
+<body class="h-100">
+    <div id="main-row" class="row h-100">
+        <div id="spinner" class="spinner-border my-auto mx-auto text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        <div class="kanji-card my-auto" style="display:none">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title">kanji<br> of the <br>day.</h5>
+                    </div>
+                    <div class="col-auto">
+                        <h5><span class="year">| {{year}}</span><br><span class="date ms-3">{{date}}</span></h5>
+                    </div>
+                </div>
+              <h1 id="kanji">{{kanji}}</h1>
+              <p id="reading"></p>
+              <hr>
+              <div id="meaninglist"></div>
+            </div>
+          </div>
+     </div>
+
+     <!--Background text-->
+        <div class="background-text">
+            <span>kanji<br>of the<br>day.</span>
+</html>
+{% raw %}
+<script id="kanji-meaning" type="text/x-handlebars-template">
+    <div class="meaning">
+       <span>{{meaning}}</span>
+    </div>
+ </script>
+ {% endraw %}

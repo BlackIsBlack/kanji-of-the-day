@@ -1,0 +1,92 @@
+body{
+    background-color: #FCC10A !important;
+}
+
+.kanji-card{
+    width: 24rem !important; 
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #EBEBEB !important;
+    filter: drop-shadow(0 0 0.65rem rgba(34, 16, 1, 0.268));
+}
+
+#main-row{
+    margin-right: 0px
+}
+
+.background-text{
+    word-spacing: -33px;
+    right: 146px;
+    line-height: 100px;
+    opacity: 0.1;
+    font-size: 110px !important;
+    font-weight: bold;
+    position: absolute;
+    bottom: 171px;
+    z-index: -1;
+}
+
+hr{
+    border-top: 3px solid !important;
+    border-radius: 999px 999px 999px 999px !important;
+    opacity: 1 !important;
+    margin-right: 120px !important;
+}
+
+.card-title{
+    font-weight: bold;
+    padding-left: 6px;
+    font-size: 0.8em;
+    opacity: 0.3;
+}
+
+.year, .date{
+    padding-right: 6px;
+    font-weight: bold;
+    
+}
+
+.year{
+    font-size: 1.2em;
+    word-spacing: -11px;
+}
+
+.date{
+    font-size: 0.8em;
+    opacity: 0.3;  
+    word-spacing: -5px;
+}
+
+#kanji{
+    font-size: 160px;
+    line-height: 160px;
+}
+#reading, #meaninglist{
+    padding-left: 6px;
+}
+#reading{
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+#meaninglist{
+    font-size: 30px;
+    padding-bottom: 35px;
+    padding-top: 20px;
+}
+.meaning{
+    font-weight: bold;
+    line-height: 10px;
+}
+
+h1, h2, h3, h4, h5, p, a, span{
+    color:#0C0C0C !important;
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+@font-face {
+    font-family: 'Kosugi Maru';
+    src: url(/static/fonts/KosugiMaru-Regular.ttf);
+  }
