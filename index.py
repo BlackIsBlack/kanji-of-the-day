@@ -35,5 +35,3 @@ def kanji_data(kanji):
         'kunyomi': kanji_data.data.main_readings.kun,
     }
     return data
-
-app.run()
