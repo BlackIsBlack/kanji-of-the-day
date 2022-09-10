@@ -27,6 +27,8 @@ def home():
 def kanji_data(kanji):
     kanji_data = Kanji.request(kanji)
 
+    print(kanji_data)
+
     # Put all data into a dictionary
     data = {
         'kanji': kanji_data.data.kanji,
