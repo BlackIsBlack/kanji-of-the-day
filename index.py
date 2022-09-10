@@ -25,7 +25,7 @@ def home():
 
 @app.route('/kanjidata/<kanji>')
 def kanji_data(kanji):
-    kanji_data = Kanji.request(kanji)
+    kanji_data = Kanji.request(kanji.encode('utf-8'))
 
     # Put all data into a dictionary
     data = {
