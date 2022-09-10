@@ -1,10 +1,10 @@
 from datetime import datetime
 import random
-from flask import Blueprint, render_template
-from app import app
+from flask import render_template
 from jisho_api.kanji import Kanji
-
-bp = Blueprint('views', __name__)
+from flask import Flask
+# Create app
+app = Flask(__name__)
 
 # Views
 @app.route('/')
