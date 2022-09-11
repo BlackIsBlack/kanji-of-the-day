@@ -4,9 +4,12 @@
     <title>Kanji of the Day</title>
     <!-- Javascript -->
     <script src="{{url_for('static', filename='js/jquery-3.6.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/js.cookie.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/colorPick.js')}}"></script>
     <script src="{{url_for('static', filename='js/handlebars.min-v4.7.7.js')}}"></script>
     <script src="{{url_for('static', filename='js/getKanji.js')}}"></script>
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/colorPick.min.css')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->
@@ -23,14 +26,15 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col">
-                        <h5 class="card-title">kanji<br> of the <br>day.</h5>
+                        <h5 class="card-title"><span id="color-picker">kanji<br> of the <br>day.</span></h5>
                     </div>
                     <div class="col-auto">
                         <h5><span class="year">| {{year}}</span><br><span class="date ms-3">{{date}}</span></h5>
                     </div>
                 </div>
-              <h1 id="kanji">{{kanji}}</h1>
-              <p id="reading"></p>
+            <a href="https://jisho.org/search/{{kanji}}%20%23kanji" target="_blank"><h1 id="kanji">{{kanji}}</h1></a>
+              <p id="reading">Kun: <span id="kun-reading"></span></p>
+              <p id="reading">On: <span id="on-reading"></span></p>
               <hr>
               <div id="meaninglist"></div>
             </div>

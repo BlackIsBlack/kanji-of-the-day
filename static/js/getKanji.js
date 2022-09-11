@@ -12,6 +12,8 @@ jQuery(function() {
             displayKanji(data);
         }
     });
+
+    $("#color-picker").colorPick();
 })
 
 function displayKanji(data){
@@ -31,9 +33,15 @@ function displayKanji(data){
 
     
     try{
-        $("#reading").text(data.kunyomi[0]);
+        $("#kun-reading").text(data.kunyomi[0]);
     }catch{
-        $("#reading").text(data.onyomi[0]);
+        $("#kun-reading").parent().remove();
+    }
+    try{
+        $("#on-reading").text(data.onyomi[0]);
+    }catch{
+        // delete the onyomi div
+        $("#on-reading").parent().remove();
     }
     $("#spinner").hide();
     $(".kanji-card").show(1000);

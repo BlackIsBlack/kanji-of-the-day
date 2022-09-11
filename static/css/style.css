@@ -1,7 +1,3 @@
-body{
-    background-color: #FCC10A !important;
-}
-
 .kanji-card{
     width: 24rem !important; 
     margin: 0 auto; /* Added */
@@ -40,7 +36,7 @@ hr{
     font-weight: bold;
     padding-left: 6px;
     font-size: 0.8em;
-    opacity: 0.3;
+    color: #b6b6b6 !important
 }
 
 .year, .date{
@@ -68,9 +64,21 @@ hr{
     padding-left: 6px;
 }
 #reading{
-    font-size: 22px;
-    padding-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: -0.25rem;
 }
+#kun-reading, #on-reading{
+    font-size: 22px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+#color-picker:hover{
+    cursor: pointer;
+}
+
 #meaninglist{
     font-size: 30px;
     padding-bottom: 35px;
@@ -82,7 +90,7 @@ hr{
 }
 
 h1, h2, h3, h4, h5, p, a, span{
-    color:#0C0C0C !important;
+    color:#0C0C0C;
     font-family: 'Kosugi Maru', sans-serif;
 }
 
