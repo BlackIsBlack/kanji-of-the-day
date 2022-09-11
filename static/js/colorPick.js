@@ -59,7 +59,7 @@
         'onColorSelected': function() {
             this.element.css({'color': this.color});
             $("body").css("background-color", this.color);
-            Cookies.set('color', this.color);
+            Cookies.set('color', this.color, { expires: 365 });
         }
     };
 
