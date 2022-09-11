@@ -46,7 +46,7 @@
     if(Cookies.get('color') != undefined) {
         var cachedColor = Cookies.get('color');
     }else{
-        var cachedColor = '#000000';
+        var cachedColor = "#f1c40f";
     }
 
     $.fn.colorPick.defaults = {
