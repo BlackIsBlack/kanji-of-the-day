@@ -8,11 +8,33 @@
     background-color: #EBEBEB !important;
     filter: drop-shadow(0 0 0.65rem rgba(34, 16, 1, 0.268));
 }
-
-#main-row{
-    margin-right: 0px
+#color-picker{
+    position: absolute;
+    top: 10px;
+    right: 55px;
 }
 
+#profile-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#color-picker::before {
+    content:url(/static/img/settings.svg);
+}
+#profile-btn::before {
+    content:url(/static/img/profile.svg);
+}
+
+#main-row{
+    margin-right: 0px !important;
+    
+}
+
+.colorPickWrapper{
+    left: -115px;
+}
 .background-text{
     word-spacing: -33px;
     right: 146px;
